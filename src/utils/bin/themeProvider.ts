@@ -1,7 +1,7 @@
 import { theme } from "../api";
 
 
-const toogle = async (args: string[]): Promise<string> => {
+const toggle = async (args: string[]): Promise<string> => {
   let newTheme = theme() ? 'light' : 'dark';
 
   if (newTheme === 'dark') {
@@ -15,4 +15,4 @@ const toogle = async (args: string[]): Promise<string> => {
   return `Switched to ${newTheme} theme...`;
 }
 
-export default toogle;
+export default toggle;
