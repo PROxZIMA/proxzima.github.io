@@ -63,7 +63,7 @@ export const about = async (args: string[]): Promise<string> => {
   More about me:
   'sumfetch' - Short summary.
   'resume'   - My latest resume.
-  'projects' - List of my projects.'`;
+  'projects' - List of my projects.`;
 };
 
 export const weather = async (args: string[]): Promise<string> => {
