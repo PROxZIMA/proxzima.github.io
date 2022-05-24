@@ -20,9 +20,9 @@ body {
 
 html,
 body,
-body>div:first-child,
+body > div:first-child,
 div#__next,
-div#__next>div {
+div#__next > div {
   height: 100%;
   overflow: auto;
 }
@@ -31,8 +31,8 @@ img {
   display: unset;
 }
 
-p[align="center"],
-p[align="center"]+p {
+p[align='center'],
+p[align='center'] + p {
   white-space: normal;
 }
 

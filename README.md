@@ -110,9 +110,9 @@ If you want to further customize your page, feel free to change the source code 
 
 ## 🌐 Deploy on Github Pages
 
-1) Create repository.
-2) Link it to your github account.
-3) Publish your master branch.
+1. Create repository.
+2. Link it to your github account.
+3. Publish your master branch.
 
 ```bash
 $ npm run deploy

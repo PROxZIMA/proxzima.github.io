@@ -88,10 +88,11 @@ export const Input = ({
         ref={inputRef}
         id="prompt"
         type="text"
-        className={`bg-transparent focus:outline-none flex-grow ${commandExists(command) || command === ''
-          ? 'text-light-green dark:text-dark-green'
-          : 'text-light-red dark:text-dark-red'
-          }`}
+        className={`bg-transparent focus:outline-none flex-grow ${
+          commandExists(command) || command === ''
+            ? 'text-light-green dark:text-dark-green'
+            : 'text-light-red dark:text-dark-red'
+        }`}
         value={command}
         onChange={onChange}
         autoFocus

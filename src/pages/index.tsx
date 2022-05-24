@@ -34,25 +34,25 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
   }, [history]);
 
   return (
-    <>
-      <div className="terminal p-8 overflow-hidden h-full"> {/* border-2 rounded-md border-light-yellow dark:border-dark-yellow */}
-        <div ref={containerRef} className="overflow-y-auto h-full">
-          <History history={history} />
+    <div className="terminal p-8 overflow-hidden h-full">
+      {' '}
+      {/* border-2 rounded-md border-light-yellow dark:border-dark-yellow */}
+      <div ref={containerRef} className="overflow-y-auto h-full">
+        <History history={history} />
 
-          <Input
-            inputRef={inputRef}
-            containerRef={containerRef}
-            command={command}
-            history={history}
-            lastCommandIndex={lastCommandIndex}
-            setCommand={setCommand}
-            setHistory={setHistory}
-            setLastCommandIndex={setLastCommandIndex}
-            clearHistory={clearHistory}
-          />
-        </div>
+        <Input
+          inputRef={inputRef}
+          containerRef={containerRef}
+          command={command}
+          history={history}
+          lastCommandIndex={lastCommandIndex}
+          setCommand={setCommand}
+          setHistory={setHistory}
+          setLastCommandIndex={setLastCommandIndex}
+          clearHistory={clearHistory}
+        />
       </div>
-    </>
+    </div>
   );
 };
 

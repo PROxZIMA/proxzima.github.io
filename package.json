@@ -1,49 +1,49 @@
 {
-    "name": "proxzima",
-    "version": "0.1.0",
-    "license": "MIT",
-    "author": {
-        "name": "Pratik Pingale",
-        "url": "https://proxzima.ml",
-        "email": "pratikbpingale9075@gmail.com"
-    },
-    "homepage": "https://proxzima.ml",
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint",
-        "export": "next export",
-        "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"proxzima.ml\" >> out/CNAME && git add out/ && git commit -m \"🚀 Deploy Webpage to gh-pages\" && git subtree push --prefix out origin gh-pages",
-        "prepare": "husky install"
-    },
-    "dependencies": {
-        "axios": "^0.27.2",
-        "next": "12.1.6",
-        "react": "17.0.2",
-        "react-dom": "17.0.2",
-        "react-markdown": "^8.0.3",
-        "react-syntax-highlighter": "^15.5.0",
-        "remark-gfm": "^3.0.1",
-        "rehype-raw": "^6.1.1"
-    },
-    "devDependencies": {
-        "@types/node": "17.0.32",
-        "@types/react": "18.0.9",
-        "@types/react-dom": "18.0.3",
-        "@typescript-eslint/eslint-plugin": "^5.23.0",
-        "@typescript-eslint/parser": "^5.23.0",
-        "autoprefixer": "^10.4.7",
-        "babel-plugin-transform-define": "^1.3.0",
-        "eslint": "8.15.0",
-        "eslint-config-next": "^12.1.6",
-        "eslint-plugin-next": "^0.0.0",
-        "eslint-plugin-prettier": "^4.0.0",
-        "eslint-plugin-react": "^7.29.4",
-        "husky": "^8.0.1",
-        "postcss": "^8.4.13",
-        "prettier": "^2.6.2",
-        "tailwindcss": "^3.0.24",
-        "typescript": "^4.6.4"
-    }
+  "name": "proxzima",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Pratik Pingale",
+    "url": "https://proxzima.ml",
+    "email": "pratikbpingale9075@gmail.com"
+  },
+  "homepage": "https://proxzima.ml",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export",
+    "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"proxzima.ml\" >> out/CNAME && git add out/ && git commit -m \"🚀 Deploy Webpage to gh-pages\" && git subtree push --prefix out origin gh-pages",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "next": "12.1.6",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-markdown": "^8.0.3",
+    "react-syntax-highlighter": "^15.5.0",
+    "rehype-raw": "^6.1.1",
+    "remark-gfm": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.32",
+    "@types/react": "18.0.9",
+    "@types/react-dom": "18.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "autoprefixer": "^10.4.7",
+    "babel-plugin-transform-define": "^1.3.0",
+    "eslint": "8.15.0",
+    "eslint-config-next": "^12.1.6",
+    "eslint-plugin-next": "^0.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "husky": "^8.0.1",
+    "postcss": "^8.4.13",
+    "prettier": "^2.6.2",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^4.6.4"
+  }
 }
