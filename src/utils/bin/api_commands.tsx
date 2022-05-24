@@ -38,7 +38,7 @@ export const about = async (args: string[]): Promise<string> => {
   return `Opening GitHub README...\n
   ${ReactDOMServer.renderToStaticMarkup(
     <ReactMarkdown
-      children={readme}
+      children={`<div style="max-width:1100px">${readme}</div>`}
       skipHtml={false}
       remarkPlugins={[remarkGfm]}
       rehypePlugins={[rehypeRaw]}
