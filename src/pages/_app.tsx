@@ -1,8 +1,8 @@
-import React from 'react';
-import '../styles/global.css';
-import config from '../../config.json';
 import Head from 'next/head';
 import Script from 'next/script';
+import React from 'react';
+import config from '../../config.json';
+import '../styles/global.css';
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -107,6 +107,10 @@ const App = ({ Component, pageProps }) => {
         <meta name="msapplication-TileColor" content="#282A36" />
         <meta name="msapplication-TileImage" content="./ms-icon-144x144.png" />
         <meta name="theme-color" content="#282A36" />
+        <meta
+          name="google-site-verification"
+          content="R7Rzv9XgAqG2QeVesFHeOZQMXG7pmaFTCJJg6ZxCiFg"
+        />
       </Head>
 
       <Script strategy="beforeInteractive" src="/scripts/darkMode.js" />
