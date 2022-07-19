@@ -1,4 +1,4 @@
-# [💻 LiveTerm - build terminal styled websites in minutes!](https://proxzima.ml)
+# [💻 LiveTerm - build terminal styled websites in minutes!](https://proxzima.dev)
 
 Highly customizable, easy-to-use, and minimal terminal styled website template, powered by Next.js.
 
@@ -6,7 +6,7 @@ Building a simple website with LiveTerm only takes **minutes**, and you only nee
 
 LiveTerm can be used to build a variety of websites:
 
-- [Personal website](https://proxzima.ml)
+- [Personal website](https://proxzima.dev)
 - [Project page](https://github.com/PROxZIMA/proxzima.github.io)
 - or maybe just a cool browser music player...be creative!
 
