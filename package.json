@@ -1,20 +1,20 @@
 {
   "name": "proxzima",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "license": "MIT",
   "author": {
     "name": "Pratik Pingale",
-    "url": "https://proxzima.ml",
+    "url": "https://proxzima.dev",
     "email": "pratikbpingale9075@gmail.com"
   },
-  "homepage": "https://proxzima.ml",
+  "homepage": "https://proxzima.dev",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"proxzima.ml\" >> out/CNAME && git add out/ && git commit -m \"🚀 Deploy Webpage to gh-pages\" && git subtree push --prefix out origin gh-pages",
+    "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && touch out/CNAME && echo \"proxzima.dev\" >> out/CNAME && git add out/ && git commit -m \"🚀 Deploy Webpage to gh-pages\" && git subtree push --prefix out origin gh-pages",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -22,6 +22,7 @@
     "next": "12.1.6",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-github-calendar": "^3.3.1",
     "react-markdown": "^8.0.3",
     "react-syntax-highlighter": "^15.5.0",
     "rehype-raw": "^6.1.1",
@@ -40,6 +41,7 @@
     "eslint-plugin-next": "^0.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.1",
     "postcss": "^8.4.13",
     "prettier": "^2.6.2",
