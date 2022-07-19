@@ -36,7 +36,7 @@ export const resume = async (args: string[]): Promise<string> => {
 };
 
 // Donate
-export const donate = async (args: string[]): Promise<JSX.IntrinsicElements> => {
+export const donate = async (args: string[]): Promise<JSX.Element> => {
   return (
     <div
       dangerouslySetInnerHTML={{
@@ -66,7 +66,7 @@ export const linkedin = async (args: string[]): Promise<string> => {
 };
 
 // Typical linux commands
-export const echo = async (args: string[]): Promise<JSX.IntrinsicElements> => {
+export const echo = async (args: string[]): Promise<JSX.Element> => {
   return (
     <div
       dangerouslySetInnerHTML={{
@@ -119,6 +119,6 @@ export const sudo = async (args?: string[]): Promise<string> => {
 };
 
 // Banner
-export const banner = (args?: string[]): JSX.IntrinsicElements => {
+export const banner = (args?: string[]): JSX.Element => {
   return <Banner />;
 };

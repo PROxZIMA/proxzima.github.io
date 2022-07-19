@@ -1,6 +1,6 @@
 import config from '../../../config.json';
 
-const sumfetch = async (args: string[]): Promise<JSX.IntrinsicElements> => {
+const sumfetch = async (args: string[]): Promise<JSX.Element> => {
   return (
     <div
       dangerouslySetInnerHTML={{

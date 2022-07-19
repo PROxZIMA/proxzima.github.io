@@ -15,7 +15,7 @@ import remarkGfm from 'remark-gfm';
 
 import config from '../../../config.json';
 
-export const projects = async (args: string[]): Promise<string> => {
+export const projects = async (args: string[]): Promise<JSX.Element> => {
   const projects = (await getProjects()).sort(
     (a, b) =>
       b.stargazers_count - a.stargazers_count ||
@@ -36,7 +36,7 @@ export const quote = async (args: string[]): Promise<string> => {
   return data.quote;
 };
 
-export const about = async (args: string[]): Promise<string> => {
+export const about = async (args: string[]): Promise<JSX.Element> => {
   const calendarTheme = theme()
     ? {
         level0: '#252733',
