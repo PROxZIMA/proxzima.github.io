@@ -20,14 +20,15 @@
   },
   "colors": {
     "light": {
-      "background": "#FAFAFA",
+      "background": "#f9fbfd",
       "foreground": "#282A36",
       "yellow": "#F4B400",
       "green": "#0F9D58",
       "gray": "#8963c4",
       "blue": "#4C8BF5",
       "red": "#EA4335",
-      "card": "#EEE",
+      "cardBg": "#FFFFFF",
+      "cardBorder": "#edf2f9",
       "topic": "#8963c480"
     },
     "dark": {
@@ -38,7 +39,8 @@
       "gray": "#BD93F9",
       "blue": "#8BE9FD",
       "red": "#FF5555",
-      "card": "#21222c",
+      "cardBg": "#21222c",
+      "cardBorder": "#21222c",
       "topic": "#BD93F980"
     }
   }
