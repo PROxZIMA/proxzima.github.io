@@ -1,0 +1,56 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 1rem;
+  transition: all 275ms ease;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card p {
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  color: var(--gray-color);
+  margin-bottom: 1rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats div {
+  display: flex;
+  align-items: center;
+  margin-right: 0.75rem;
+  min-width: fit-content;
+}
+
+.stats > div:nth-child(2) {
+  margin-right: 0;
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.5rem 0 0.5rem;
+}
+
+.topics span {
+  margin: 0.5rem 0.5rem 0 0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  transition: all 275ms ease;
+}
+
+.icon {
+  color: var(--gray-color);
+  margin-right: 0.3rem;
+}
