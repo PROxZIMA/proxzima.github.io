@@ -1,7 +1,7 @@
 import React from 'react';
-import { Input } from '../components/input';
-import { useHistory } from '../components/history/hook';
 import { History } from '../components/history/History';
+import { useHistory } from '../components/history/hook';
+import { Input } from '../components/Input';
 import { banner } from '../utils/bin';
 
 interface IndexPageProps {
