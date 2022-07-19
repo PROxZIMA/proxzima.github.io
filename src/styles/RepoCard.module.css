@@ -4,11 +4,16 @@
   justify-content: space-between;
   border-radius: 5px;
   padding: 1rem;
+  box-shadow: 0 .75rem 1.5rem rgba(18, 38, 63, .03);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: .5rem;
   transition: all 275ms ease;
 }
 
 .card:hover {
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 .75rem 1.5rem rgba(18, 38, 63, .03),
+    2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .card p {

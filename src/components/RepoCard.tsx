@@ -7,7 +7,9 @@ import styles from '../styles/RepoCard.module.css';
 
 const RepoCard = ({ repo }) => {
   return (
-    <div className={`${styles.card} bg-light-card dark:bg-dark-card`}>
+    <div
+      className={`${styles.card} border-light-cardBorder dark:border-dark-cardBorder bg-light-cardBg dark:bg-dark-cardBg`}
+    >
       <div>
         <h3 className={styles.title}>{repo.name}</h3>
         <p>{repo.description}</p>
