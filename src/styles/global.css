@@ -12,6 +12,16 @@
   font-family: 'Hack', monospace;
 }
 
+:root {
+  --foreground-color: theme('colors.light.foreground');
+  --gray-color: theme('colors.light.gray');
+}
+
+:root.dark {
+  --foreground-color: theme('colors.dark.foreground');
+  --gray-color: theme('colors.dark.gray');
+}
+
 html,
 body {
   width: 100vw;
@@ -20,9 +30,9 @@ body {
 
 html,
 body,
-body>div:first-child,
+body > div:first-child,
 div#__next,
-div#__next>div {
+div#__next > div {
   height: 100%;
   overflow: auto;
 }
@@ -32,7 +42,7 @@ img {
 }
 
 p[align='center'],
-p[align='center']+p {
+p[align='center'] + p {
   white-space: normal;
 }
 

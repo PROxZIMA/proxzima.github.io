@@ -1,8 +1,8 @@
 // List of commands that do not require API calls
 
-import * as bin from './index';
 import config from '../../../config.json';
-import packageJson from '../../../package.json';
+import Banner from '../../components/Banner';
+import * as bin from './index';
 
 // Help
 export const help = async (args: string[]): Promise<string> => {
@@ -36,11 +36,17 @@ export const resume = async (args: string[]): Promise<string> => {
 };
 
 // Donate
-export const donate = async (args: string[]): Promise<string> => {
-  return `Thank you for your interest.
+export const donate = async (args: string[]): Promise<JSX.IntrinsicElements> => {
+  return (
+    <div
+      dangerouslySetInnerHTML={{
+        __html: `Thank you for your interest.
 Here are the ways you can support my work:\n
 - <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls['Buy Me a Coffee']}" target="_blank">Buy Me a Coffee?</a></u>
-`;
+`,
+      }}
+    />
+  );
 };
 
 // Contact
@@ -60,8 +66,14 @@ export const linkedin = async (args: string[]): Promise<string> => {
 };
 
 // Typical linux commands
-export const echo = async (args: string[]): Promise<string> => {
-  return args.join(' ');
+export const echo = async (args: string[]): Promise<JSX.IntrinsicElements> => {
+  return (
+    <div
+      dangerouslySetInnerHTML={{
+        __html: args.join(' '),
+      }}
+    />
+  );
 };
 
 export const whoami = async (args: string[]): Promise<string> => {
@@ -107,18 +119,6 @@ export const sudo = async (args?: string[]): Promise<string> => {
 };
 
 // Banner
-export const banner = (args?: string[]): string => {
-  return `
-██████╗ ██████╗  ██████╗ ██╗  ██╗███████╗ ██╗███╗   ███╗ █████╗
-██╔══██╗██╔══██╗██╔═████╗╚██╗██╔╝╚══███╔╝███║████╗ ████║██╔══██╗
-██████╔╝██████╔╝██║██╔██║ ╚███╔╝   ███╔╝ ╚██║██╔████╔██║███████║
-██╔═══╝ ██╔══██╗████╔╝██║ ██╔██╗  ███╔╝   ██║██║╚██╔╝██║██╔══██║
-██║     ██║  ██║╚██████╔╝██╔╝ ██╗███████╗ ██║██║ ╚═╝ ██║██║  ██║
-╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ v${packageJson.version}
-
-Type 'help' to see the list of available commands.
-Type 'about' to see my GitHub Readme.
-Type 'sumfetch' to display summary.
-Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
-`;
+export const banner = (args?: string[]): JSX.IntrinsicElements => {
+  return <Banner />;
 };

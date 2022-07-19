@@ -1,7 +1,10 @@
 import config from '../../../config.json';
 
-const sumfetch = async (args: string[]): Promise<string> => {
-  return `
+const sumfetch = async (args: string[]): Promise<JSX.IntrinsicElements> => {
+  return (
+    <div
+      dangerouslySetInnerHTML={{
+        __html: `
                   %                  sumfetch
                   +%                -----------
                   %                  ABOUT
@@ -20,7 +23,10 @@ const sumfetch = async (args: string[]): Promise<string> => {
         %\=-::::::::::=+/             DONATE
             /\*****\/%                 <u><a href="${config.donate_urls['Buy Me a Coffee']}" target="_blank">${config.donate_urls['Buy Me a Coffee']}</a></u>
 
-`;
+`,
+      }}
+    />
+  );
 };
 
 export default sumfetch;
