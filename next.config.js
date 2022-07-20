@@ -1,3 +1,3 @@
 module.exports = {
-  exportPathMap: () => ({ '/': { page: '/' } }),
+  // exportPathMap: () => ({ '/': { page: '/' } }),
 };
