@@ -15,11 +15,15 @@
 :root {
   --foreground-color: theme('colors.light.foreground');
   --gray-color: theme('colors.light.gray');
+  --error-bg: theme('colors.light.background');
+  --error-green: theme('colors.light.foreground');
 }
 
 :root.dark {
   --foreground-color: theme('colors.dark.foreground');
   --gray-color: theme('colors.dark.gray');
+  --error-bg: theme('colors.dark.background');
+  --error-green: theme('colors.dark.green');
 }
 
 html,

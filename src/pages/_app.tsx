@@ -8,8 +8,10 @@ const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
 
   const onClickAnywhere = () => {
-    // inputRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    inputRef.current.focus({ preventScroll: true });
+    if (inputRef.current) {
+      // inputRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      inputRef.current.focus({ preventScroll: true });
+    }
   };
 
   return (
