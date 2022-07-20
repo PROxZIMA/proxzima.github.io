@@ -31,7 +31,7 @@ const NotFoundPage = () => {
   const [input, setInput] = useState('');
   const [history, setHistory] = React.useState<Array<JSX.Element>>([
     <p key={0} className={style.prompt}>
-      {`The page you are looking for might have been removed\nor is temporarily unavailable. Try typing 'error'.`}
+      {`The page you are looking for might have been removed\n  or is temporarily unavailable. Try typing 'error'.`}
     </p>,
     <p key={1} className={style.prompt}>
       Please try to <span onClick={() => router.back()}>go back</span> or{' '}
