@@ -38,14 +38,17 @@ export const resume = async (args: string[]): Promise<string> => {
 // Donate
 export const donate = async (args: string[]): Promise<JSX.Element> => {
   return (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: `Thank you for your interest.
-Here are the ways you can support my work:\n
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls['Buy Me a Coffee']}" target="_blank">Buy Me a Coffee?</a></u>
-`,
-      }}
-    />
+    <>
+      {`Thank you for your interest.\nHere are the ways you can support my work:\n\n- `}
+      <a
+        className="text-light-blue dark:text-dark-blue underline"
+        href={config.donate_urls['Buy Me a Coffee']}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Buy Me a Coffee?
+      </a>
+    </>
   );
 };
 
@@ -66,14 +69,8 @@ export const linkedin = async (args: string[]): Promise<string> => {
 };
 
 // Typical linux commands
-export const echo = async (args: string[]): Promise<JSX.Element> => {
-  return (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: args.join(' '),
-      }}
-    />
-  );
+export const echo = async (args: string[]): Promise<string> => {
+  return args.join(' ');
 };
 
 export const whoami = async (args: string[]): Promise<string> => {

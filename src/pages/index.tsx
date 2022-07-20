@@ -35,7 +35,6 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
 
   return (
     <div className="terminal p-8 overflow-hidden h-full">
-      {' '}
       {/* border-2 rounded-md border-light-yellow dark:border-dark-yellow */}
       <div ref={containerRef} className="overflow-y-auto h-full">
         <History history={history} />

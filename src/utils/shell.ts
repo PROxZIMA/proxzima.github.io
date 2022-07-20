@@ -3,7 +3,7 @@ import * as bin from './bin';
 
 export const shell = async (
   command: string,
-  setHistory: (value: string) => void,
+  setHistory: (value: string | JSX.Element) => void,
   clearHistory: () => void,
   setCommand: React.Dispatch<React.SetStateAction<string>>,
 ) => {
