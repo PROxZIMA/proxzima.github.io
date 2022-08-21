@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, { useEffect, useRef, useState } from 'react';
 import style from '../styles/404.module.css';
@@ -138,7 +139,6 @@ const NotFoundPage = () => {
     if (inputRef.current) {
       inputRef.current.focus({ preventScroll: true });
     }
-    document.title = '404 - Page Not Found';
   }, []);
 
   useEffect(() => {
@@ -149,37 +149,43 @@ const NotFoundPage = () => {
   }, [history]);
 
   return (
-    <div
-      className="overflow-hidden h-full"
-      onClick={() => inputRef.current.focus({ preventScroll: true })}
-    >
-      <div className="overflow-y-auto h-full">
-        <form className={style.four_oh_four_form} onSubmit={onSubmit}>
-          <input
-            type={style.text}
-            className={style.input_404}
-            ref={inputRef}
-            onChange={onChange}
-            value={input}
-          />
-        </form>
+    <>
+      <Head>
+        <title>404 - Page Not Found</title>
+      </Head>
 
-        <div className={style.terminal}>
-          <h1
-            className={`${style.error} text-light-green/[.8] dark:text-dark-green/[.8]`}
-          >
-            Error <span className={style.errorcode}>404</span>
-          </h1>
-          {history}
-          <p
-            className={`${style.prompt} ${style.output} ${style.new_output}`}
-            ref={outputRef}
-          >
-            {input}
-          </p>
+      <div
+        className="overflow-hidden h-full"
+        onClick={() => inputRef.current.focus({ preventScroll: true })}
+      >
+        <div className="overflow-y-auto h-full">
+          <form className={style.four_oh_four_form} onSubmit={onSubmit}>
+            <input
+              type={style.text}
+              className={style.input_404}
+              ref={inputRef}
+              onChange={onChange}
+              value={input}
+            />
+          </form>
+
+          <div className={style.terminal}>
+            <h1
+              className={`${style.error} text-light-green/[.8] dark:text-dark-green/[.8]`}
+            >
+              Error <span className={style.errorcode}>404</span>
+            </h1>
+            {history}
+            <p
+              className={`${style.prompt} ${style.output} ${style.new_output}`}
+              ref={outputRef}
+            >
+              {input}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

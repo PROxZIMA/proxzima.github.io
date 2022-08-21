@@ -1,7 +1,13 @@
 // List of commands that require API calls
 
 import RepoCard from '../../components/RepoCard';
-import { getProjects, getQuote, getReadme, getWeather, theme } from '../api';
+import {
+  defaultTheme,
+  getProjects,
+  getQuote,
+  getReadme,
+  getWeather
+} from '../api';
 
 import GitHubCalendar from 'react-github-calendar';
 import ReactMarkdown from 'react-markdown';
@@ -37,7 +43,8 @@ export const quote = async (args: string[]): Promise<string> => {
 };
 
 export const about = async (args: string[]): Promise<JSX.Element> => {
-  const calendarTheme = theme()
+  const theme = defaultTheme();
+  const calendarTheme = theme
     ? {
         level0: '#252733',
         level1: '#0e4429',
@@ -53,7 +60,7 @@ export const about = async (args: string[]): Promise<JSX.Element> => {
         level4: '#216e39',
       };
 
-  const codeTheme = theme() ? dracula : oneLight;
+  const codeTheme = theme ? dracula : oneLight;
 
   const readme = await getReadme();
 

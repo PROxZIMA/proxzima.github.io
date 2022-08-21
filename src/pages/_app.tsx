@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Script from 'next/script';
 import React from 'react';
 import config from '../../config.json';
 import '../styles/global.css';
@@ -110,8 +109,6 @@ const App = ({ Component, pageProps }) => {
         <meta name="msapplication-TileImage" content="./ms-icon-144x144.png" />
         <meta name="theme-color" content="#282A36" />
       </Head>
-
-      <Script strategy="beforeInteractive" src="/scripts/darkMode.js" />
 
       <div
         className="text-light-foreground dark:text-dark-foreground min-w-max text-xs md:min-w-full md:text-base"

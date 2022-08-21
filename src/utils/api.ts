@@ -37,9 +37,29 @@ export const getQuote = async () => {
   }
 };
 
-export const theme = () =>
-  localStorage.getItem('proxzimaDarkMode') === 'dark' ||
-  (!('proxzimaDarkMode' in localStorage) &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches) ||
-  (!('proxzimaDarkMode' in localStorage) &&
-    window.document.documentElement.classList.contains('dark'));
+/**
+ * Get default theme from localStorage, window media or document body class.
+ * @returns {boolean} false if light theme, true by default.
+ */
+export const defaultTheme = () => {
+  const id = 'proxzimaDarkMode';
+  if (typeof window !== 'undefined' && window.localStorage) {
+    const storedPrefs = window.localStorage.getItem(id);
+    if (storedPrefs === 'light') {
+      return false;
+    }
+
+    const userMedia = window.matchMedia('(prefers-color-scheme: light)');
+    if (!(id in localStorage) && userMedia.matches) {
+      return false;
+    }
+
+    const docTheme =
+      window.document.documentElement.classList.contains('light');
+    if (!(id in localStorage) && docTheme) {
+      return false;
+    }
+  }
+
+  return true;
+};
