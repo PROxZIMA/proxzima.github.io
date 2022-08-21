@@ -26,7 +26,7 @@ LiveTerm can be used to build a variety of websites:
 
 LiveTerm requires the `yarn` package manager. You can install `yarn` [here](https://classic.yarnpkg.com/lang/en/docs/install/).
 
-Simply run the following commmand in your terminal:
+Simply run the following command in your terminal:
 
 ```bash
 $ sh -c "$(curl -fsSL https://raw.github.com/PROxZIMA/proxzima.github.io/main/install/install.sh)"
@@ -124,15 +124,16 @@ You can add on to the deploy command to create the CNAME file for you. GitHub de
 
 ```bash
 rm -rf node_modules/.cache
+&& rm -rf .next
 && rimraf out
 && next build
 && next export
 && touch out/.nojekyll
 && touch out/CNAME
-&& echo \"example.com\" >> out/CNAME
+&& echo "example.com" >> out/CNAME
 && git add out/
 && git commit -m "🚀 Deploy Webpage to gh-pages"
-&& git subtree push --prefix out origin gh-pages
+&& git push origin `git subtree split --prefix out master`:gh-pages --force
 ```
 
 ## 🙌 Credit
