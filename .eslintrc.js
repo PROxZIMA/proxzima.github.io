@@ -1,6 +1,6 @@
 module.exports = {
   plugins: ['prettier', 'unused-imports'],
-  extends: ['next/core-web-vitals'],
+  extends: ['next'],
   rules: {
     'no-console': 'warn',
     'prettier/prettier': 'warn',
