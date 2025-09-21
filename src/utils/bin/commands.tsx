@@ -121,6 +121,18 @@ export const sudo = async (args?: string[]): Promise<string> => {
   return `Permission denied: with little power comes... no responsibility? `;
 };
 
+export const history = async (args: string[]): Promise<string> => {
+  if (args.length === 0) {
+    return 'No commands in history.';
+  }
+
+  const maximumNumberOfDigits = args.length.toString().length;
+  return args
+    .map((value, i) => `${(i + 1).toString().padStart(maximumNumberOfDigits, ' ')}:  ${value}`)
+    .reverse()
+    .join('\n');
+};
+
 // Banner
 export const banner = (args?: string[]): JSX.Element => {
   return <Banner />;
