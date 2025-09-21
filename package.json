@@ -14,7 +14,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "deploy": "rimraf node_modules/.cache && rimraf .next && rimraf out && next build && next export && echo \"\" > out/.nojekyll && echo \"proxzima.dev\" > out/CNAME && git add out/ && git commit -m \"🚀 Deploy Webpage to gh-pages\" && git subtree push --prefix out origin gh-pages",
+    "deploy": "rimraf node_modules/.cache && rimraf .next && rimraf out && next build && next export && echo '' > out/.nojekyll && echo proxzima.dev > out/CNAME && git add out/ && git commit -m \"🚀 Deploy Webpage to gh-pages\" && git subtree push --prefix out origin gh-pages",
     "prepare": "husky install"
   },
   "dependencies": {
