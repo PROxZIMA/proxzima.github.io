@@ -29,7 +29,7 @@ LiveTerm requires the `yarn` package manager. You can install `yarn` [here](http
 Simply run the following command in your terminal:
 
 ```bash
-$ sh -c "$(curl -fsSL https://raw.github.com/PROxZIMA/proxzima.github.io/main/install/install.sh)"
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/PROxZIMA/proxzima.github.io/refs/heads/master/install/install.sh)"
 ```
 
 This will install LiveTerm to the current directory. You can start building your website with:

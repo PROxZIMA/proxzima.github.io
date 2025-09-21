@@ -2,10 +2,14 @@ import axios from 'axios';
 import config from '../../config.json';
 
 export const getProjects = async () => {
-  const { data } = await axios.get(
-    `https://api.github.com/users/${config.social.github}/repos`,
-  );
-  return data;
+  try {
+    const { data } = await axios.get(
+      `https://api.github.com/users/${config.social.github}/repos`,
+    );
+    return data;
+  } catch (error) {
+    return 'Unable to query Github at the moment. Please try again later.';
+  }
 };
 
 export const getReadme = async () => {
@@ -13,7 +17,7 @@ export const getReadme = async () => {
     const { data } = await axios.get(config.readmeUrl);
     return data;
   } catch (error) {
-    return error;
+    return 'Unable to fetch README at the moment. Please try again later.';
   }
 };
 
@@ -22,18 +26,20 @@ export const getWeather = async (city: string) => {
     const { data } = await axios.get(`https://wttr.in/${city}?qFAT`);
     return data;
   } catch (error) {
-    return error;
+    return 'Unable to fetch weather data at the moment. Please try again later.';
   }
 };
 
 export const getQuote = async () => {
   try {
-    const { data } = await axios.get('https://api.quotable.io/random');
+    const { data } = await axios.get('http://api.quotable.io/random');
     return {
       quote: `“${data.content}” — ${data.author}`,
     };
   } catch (error) {
-    return error;
+    return {
+      quote: 'Unable to fetch a quote at the moment. Please try again later.',
+    };
   }
 };
 

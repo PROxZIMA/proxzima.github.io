@@ -16,9 +16,6 @@ export const Input = ({
   clearHistory,
 }) => {
   const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.isComposing) {
-      return;
-    }
     const commands: [string] = history
       .map(({ command }) => command)
       .filter((command: string) => command);
