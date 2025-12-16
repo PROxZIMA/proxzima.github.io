@@ -70,13 +70,11 @@ export const linkedin = async (args: string[]): Promise<string> => {
 
 // Typical linux commands
 export const echo = async (args: string[]): Promise<string> => {
+  const string = args.join(' ');
   // https://regex101.com/r/qwEyED/1
-  return args
-    .join(' ')
-    .replace(
-      /<(?:(?:(?:(script|style|object|embed|applet|noframes|noscript|noembed)(?:\s+(?:"[\S\s]*?"|'[\S\s]*?'|(?:(?!\/>)[^>])?)+)?\s*>)[\S\s]*?<\/\1\s*(?=>))|(?:\/?[\w:]+\s*\/?)|(?:[\w:]+\s+(?:"[\S\s]*?"|'[\S\s]*?'|[^>]?)+\s*\/?)|\?[\S\s]*?\?|(?:!(?:(?:DOCTYPE[\S\s]*?)|(?:\[CDATA\[[\S\s]*?\]\])|(?:--[\S\s]*?--)|(?:ATTLIST[\S\s]*?)|(?:ENTITY[\S\s]*?)|(?:ELEMENT[\S\s]*?))))>/g,
-      '',
-    );
+  const regex = /<(?:(?:(?:(script|style|object|embed|applet|noframes|noscript|noembed)(?:\s+(?:"[\S\s]*?"|'[\S\s]*?'|(?:(?!\/>)[^>])?)+)?\s*>)[\S\s]*?<\/\1\s*(?=>))|(?:\/?[\w:]+\s*\/?)|(?:[\w:]+\s+(?:"[\S\s]*?"|'[\S\s]*?'|[^>]?)+\s*\/?)|\?[\S\s]*?\?|(?:!(?:(?:DOCTYPE[\S\s]*?)|(?:\[CDATA\[[\S\s]*?\]\])|(?:--[\S\s]*?--)|(?:ATTLIST[\S\s]*?)|(?:ENTITY[\S\s]*?)|(?:ELEMENT[\S\s]*?))))>/g;
+
+  return string.replace(regex, "") + (regex.test(string) ? "\n\nNice try LMAO! Don't try to XSS me." : "") ;
 };
 
 export const whoami = async (args: string[]): Promise<string> => {
@@ -119,6 +117,18 @@ export const emacs = async (args?: string[]): Promise<string> => {
 export const sudo = async (args?: string[]): Promise<string> => {
   window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
   return `Permission denied: with little power comes... no responsibility? `;
+};
+
+export const history = async (args: string[]): Promise<string> => {
+  if (args.length === 0) {
+    return 'No commands in history.';
+  }
+
+  const maximumNumberOfDigits = args.length.toString().length;
+  return args
+    .map((value, i) => `${(i + 1).toString().padStart(maximumNumberOfDigits, ' ')}:  ${value}`)
+    .reverse()
+    .join('\n');
 };
 
 // Banner

@@ -40,7 +40,7 @@ export const Input = ({
     if (event.key === 'Enter' || event.code === '13') {
       event.preventDefault();
       setLastCommandIndex(0);
-      await shell(command, setHistory, clearHistory, setCommand);
+      await shell(command, setHistory, clearHistory, setCommand, commands.slice(1));
       // containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
     }
 

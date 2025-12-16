@@ -33,9 +33,9 @@ const Banner = () => {
     };
   }, [isAnimated1, isAnimated2, isAnimated3]);
 
-  const commonClasses = 'inline-block subpixel-antialiased';
+  const commonClasses = 'subpixel-antialiased';
   const commonBigTextClasses = 'text-4xl md:text-5xl lg:text-6xl';
-  const tailwindClassName = `text-[.65rem] md:text-base lg:text-lg !leading-tight min-w-max ${commonClasses} ${
+  const tailwindClassName = `text-[.65rem] md:text-base lg:text-lg !leading-tight min-w-max inline-block ${commonClasses} ${
     isAnimated1 && style.name_gradient
   }`;
   const tailwindClassWeb = `${commonBigTextClasses} ${commonClasses} ${
@@ -58,12 +58,12 @@ const Banner = () => {
 ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ v${packageJson.version}`}
         </span>
         <br />
-        <span className={tailwindClassWeb}>Web</span>
+        <span className={tailwindClassWeb}>Full-Stack </span>
         <br />
-        <span className={tailwindClassDeveloper}>Developer</span>
+        <span className={tailwindClassDeveloper}>Cloud Engineer</span>
       </h1>
       <p className="my-5 md:my-10 text-neutral w-[60ch]">
-        {`Yoo, I'm Pratik Pingale. I seek problems to solve them. Love to learn whatever that will make the future. Very versatile and adapt quickly to a changing environment. Passionate, highly skilled in Front-End Web Development alongside modern frameworks like React/Django and other libraries. Open Source contributor.`}
+        {`Yoo, I'm Pratik Pingale. Full-Stack and cloud-focused software engineer with experience designing and deploying secure, scalable services on Kubernetes and Azure. Skilled in CI/CD, monitoring with a strong track record of improving reliability, ensuring compliance, and delivering enterprise-grade solutions in agile environments through secure architecture and efficient cloud practices.`}
       </p>
       <p>
         {`Type 'help' to see the list of available commands.\nType 'about' to see my GitHub Readme.\nType 'sumfetch' to display summary.\nType 'repo' or click `}

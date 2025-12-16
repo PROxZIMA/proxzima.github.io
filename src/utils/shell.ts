@@ -6,6 +6,7 @@ export const shell = async (
   setHistory: (value: string | JSX.Element) => void,
   clearHistory: () => void,
   setCommand: React.Dispatch<React.SetStateAction<string>>,
+  history: Array<string>,
 ) => {
   const args = command.split(' ');
   args[0] = args[0].toLowerCase();
@@ -18,7 +19,11 @@ export const shell = async (
     setHistory(
       `shell: command not found: ${args[0]}. Try 'help' to get started.`,
     );
-  } else {
+  } else if (args[0] === 'history') {
+    const output = await bin[args[0]](history);
+    setHistory(output);
+  }
+  else {
     const output = await bin[args[0]](args.slice(1));
     setHistory(output);
   }

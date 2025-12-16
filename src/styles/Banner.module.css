@@ -1,5 +1,6 @@
 .name_gradient {
   background-size: 300% 300%;
+  background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -12,6 +13,7 @@
 
 .first_word_gradient {
   background-size: 300% 300%;
+  background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -24,6 +26,7 @@
 
 .second_word_gradient {
   background-size: 300% 300%;
+  background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
